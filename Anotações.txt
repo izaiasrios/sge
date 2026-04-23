@@ -1,0 +1,32 @@
+#Criar diretório da aplicação
+mkdir sge
+
+# Criar o ambiente virtual
+python3 -m venv venv
+
+# Ativar o ambiente virtual
+source venv/bin/activate
+
+# Instalar o Django
+pip install Django
+
+# Verificar versão do Django
+django-admin --version
+
+# Criar o Projeto Django
+django-admin startproject app .
+
+# Gerar makemigrations
+python manage.py makemigrations
+
+# Aplicar o Migrate
+python manage.py migrate
+
+# Criar superusuário
+python manage.py createsuperuser
+
+# Rodar o servidor
+python manage.py runserver 0.0.0.0:8000
+
+# Criar apps
+python manage.py startapp brands
