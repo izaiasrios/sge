@@ -6,6 +6,10 @@ SGE - Produtos
 
 {% block content %}
 
+{% include 'components/_product_metrics.html'%}
+
+<div class="mb-4"></div>
+
   <div class="row mb-3">
     <div class="col md-6"> 
         <form method="get" action="{% url 'product_list' %}">
@@ -17,7 +21,8 @@ SGE - Produtos
                         <i class="bi bi-search"></i>
                     </button>
             </div>    
-        </form>    
+        </form>   
+         
 
         <div class="col md-6 text-end">
         <a href="{% url 'product_create' %}" class="btn btn-success">
@@ -25,6 +30,8 @@ SGE - Produtos
         </a>
         </div>  
     </div>    
+
+<div class="mb-2"></div>
 
     <div class="row mb-3">
         <div class="col md-6">
